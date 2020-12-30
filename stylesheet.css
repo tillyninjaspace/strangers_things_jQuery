@@ -1,0 +1,418 @@
+#logo {
+    text-align: center;
+}
+
+#app {
+    display: flex;
+    justify-content: space-between;
+    font-family: Geneva, Tahoma, sans-serif;
+    margin-top: 30px;
+}
+
+#account-form {
+    display: flex;
+    flex-direction: column;
+    background: #767575;
+    width: 200px;
+    justify-content: space-around;
+    padding: 20px;
+    /* padding-top: 30px; */
+    padding-bottom: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+#log-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#log-form button {
+    margin-top: 15px;
+}
+
+#log-form input{
+    margin-bottom: 5px;
+}
+
+#new-account-form.closed {
+    display: flex;
+}
+
+#account-form.closed {
+    display: none;
+}
+
+#new-account-form {
+    background-color: black;
+    color: white;
+    display: none;
+    flex-direction: column;
+    margin-bottom: 5px;
+    width: 200px;
+    justify-content: space-around;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(101, 167, 230);
+    max-height: 550px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+#post-form button {
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+#posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.postElementTitle {
+    text-transform: capitalize;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7px;
+    overflow-wrap: break-word;
+    padding: 20px;
+    padding-right: 25px;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(101, 167, 230), rgb(255, 255, 255) );
+    width: 250px;
+    max-height: 400px;
+    border: 1px solid gray;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom: 10px solid gray;
+}
+
+li {
+    list-style-type: none;
+}
+
+.accountMessage {
+    text-align: center;
+}
+
+.minCharacter {
+    text-align: center;
+    color: rgb(194, 47, 47);
+}
+  
+#messageForm {
+    background-color: lightgray;
+    border: 1px solid black;
+    text-align: left;
+    width: 300px;
+    padding: 10px;
+    display: grid;
+    align-items: center;
+    position: fixed;
+    top: 300px;
+    left: 450px; 
+}
+
+#edit-form{
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    width: 220px;
+    height: 500px;
+    position: fixed;
+    top: 160px;
+    left: 500px; 
+    display:none;
+}
+
+.messageModal {
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
+.delete {
+    color: red;
+}
+
+.delete:hover {
+    background-color: red;
+    color: white;
+}
+
+.messageList {
+    font-size: 14px;
+    padding: 10px;
+    max-width: 500px;
+    min-width: 150px;
+}
+
+.messageBlocks {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.asideHeader {
+    text-align: center;
+    max-width: 200px;
+}
+
+.signOut, .openYourPosts {
+    background-color:black ;
+    color: white;
+    border-radius: 5px;
+    padding: 7px;
+    display: none;
+    margin-bottom: 2px;
+}
+
+.openYourPosts:hover {
+    background-color: gray;
+}
+
+.logger {
+    padding: 3px;
+    border-radius: 5px;
+    background-color:black ;
+    color: white;
+}
+
+.signOut:hover {
+    background-color: red;
+}
+
+.cancel, .close {
+    font-size: 12px;
+    background-color: black;
+    border-radius: 5px;
+    width: 60px;
+    color: red;
+    text-align: center;
+    padding: 5px;
+    font-family: Geneva, Tahoma, sans-serif;
+    margin: 5px;
+    height: 15px;
+}
+
+button {
+    margin-top: 10px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.singleMessageItem {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.welcome-message {
+    text-align: center;
+    padding: 5px;
+}
+
+.material-icons:hover, .loggingIn:hover {
+    color: orange;
+}
+
+
+.material-icons {
+    padding-top: 3px;
+}
+
+.postEditID {
+    font-size: 8px;
+    display: none;
+}
+
+.edit {
+    background-color: rgb(19, 48, 143);
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.edit:hover {
+    background-color: black;
+}
+
+#accountModal {
+    font-family: Geneva, Tahoma, sans-serif; 
+    background-color: gray;
+    width: 40%;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px dashed rgb(12, 8, 8);
+    position: absolute;
+    top: 255px;
+    right: 8px; 
+    padding: 10px;
+}
+
+#accountModal.open {
+    display: block;
+}
+
+.accountPosts {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.personal {
+    background-color: yellow;
+}
+
+h1, h2{
+    text-align: center;
+    font-family: 'Sora', sans-serif;
+}
+
+input#reckeywords{
+    width: 96%;
+    height: 25px;
+}
+
+#rectangularSearchForm {
+    background: linear-gradient(rgb(100, 99, 99), rgb(230, 227, 227));
+    padding: 5px;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.xclose {
+    background-color: black;
+    color: red;
+    width: 70px;
+    border-radius: 5px;
+    padding: 3px;
+    margin-top: 5px;
+    text-align: center;
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.siteName img {
+    width: 200px;
+}
+
+.accountOptions {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cancelMessage {
+    background-color: black;
+    color: red;
+    width: 60px;
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.defaultClose {
+    display: block;
+}
+
+.developer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.developer a, .developerName {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.developer a:hover {
+    color: #767575;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #app {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #log-form {
+        order: 1;
+    }
+
+    #signInPerks {
+        padding-bottom: 10px;
+    }
+
+    #accountModal {
+        width: auto;
+        max-width: 570px;
+    }   
+
+    .post {
+        width: 200px;
+    }
+
+    #messageForm {
+        left: -0px; 
+    }
+
+    #edit-form{
+        left: 100px;
+        top: 100px;
+    }
+}    

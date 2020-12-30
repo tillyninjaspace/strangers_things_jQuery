@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stranger's Things</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+        <script defer src="app.js"></script>
+           <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5229106-20"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-5229106-20');
+        </script>
+    </head>
+<body>
+    <header class="accountInfo">
+        <h1 class="siteName"><img src="images/things.jpg"/></h1>
+        <section id="rectangularSearchBox"></section>
+        <section class="accountOptions">
+            <ul>
+                <li class="loggingIn"><i class="material-icons" class="loggingIn">assignment_ind</i>Log In</li>
+                <li class="createNewAccount" class="defaultClose"><i class="material-icons" class="loggingIn">label_important</i>Create New Account</li>
+                <li class="signOut">Sign Out</li>
+                <li class="openYourPosts">Your Posts & Messages</li>
+             </ul>
+        </section>
+         <div class="account"></div>
+    </header>   
+    <div id="app">
+        <div id="signInPerks">
+            <form id="post-form">
+                <h2>Create a New Post</h2>
+                <label>Post Title</label>
+                <input type="text" placeholder="title" id="title" required>
+                <br>
+                <label>Post Description</label>
+                 <textarea required columns="40" rows="10" id="description"></textarea>
+                <label>Price</label>
+                <input type="text" placeholder="$price" id="price" required>
+                <label>Location</label>
+                <input type="text" placeholder="location" id="location">
+                <label for="willDeliver">Will Deliver?</label>
+                <select name="Select Yes or No" id="select">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+                </select>
+                <br>
+                <button type="submit">Create Post</button>
+            </form>
+            <p class="developer">
+                <span class="material-icons"><a href="https://www.linkedin.com/in/tillywright/" target="_blank">contact_mail</span>Developer: Tilly Wright</a>
+                <span class="developerName">Hello!</span>
+            </p>
+        </div>
+        <div id="posts"></div>
+        <section id="log-form">
+            <aside class="asideHeader"><p>Log in to see or send messages</p>  </aside>
+            <form id="new-account-form">
+                <p class="accountError"></p>
+                <span class="minCharacter"></span>
+                <h4>Create an Account</h4>
+                <label>Username</label>
+                <input type="text" placeholder="username" minlength="5" id="new-username" required>
+                <br>
+                <label>Password</label>
+                <input type="text" placeholder="password" minlength="5" id="new-password"></textarea>
+                <button type="submit">Create Account</button>
+            </form>  
+            <form id="account-form">
+                <br/>
+                <h4>Log-In</h4>
+                <label>Username</label>
+                <input type="text" placeholder="username" minlength="5" id="username" required>
+                <br>
+                <label>Password</label>
+                <input type="text" placeholder="password" minlength="5" id="password"></textarea>
+                <button type="submit">Enter Password</button>
+            </form>
+            <p class="welcome-message"></p>
+            <aside class="messageList"></aside>
+        </section>
+    </div> 
+        <section class="logs">            
+        </section>
+            <aside class="accountSection">
+                <aside class="messageModal">
+                    <form id="messageForm">
+                        <label class="messageSender">Message for</label>
+                        <h4 class="messageTitleSlot"></h4>
+                        <label>Content</label>
+                        <textarea id="message-description" columns="40" rows="5"></textarea>
+                        <button type="submit" class="send">Send</button>
+                        <p class="cancelMessage">X CLOSE</p>
+                     </form>
+                </aside>
+            </aside>    
+        <footer id="editPost">
+            <form id="edit-form">
+                <h4>Edit Post</h4>
+                <label>Post Title</label>
+                <p class="postEditID"></p>
+                <input type="text" placeholder="title" id="editTitle" required>
+                <br>
+                <label>Post Description</label>
+                <textarea required columns="40" rows="10" id="editDescription"></textarea>
+                <label>Price</label>
+                <input type="text" placeholder="$price" id="editPrice" required>
+                <label>Location</label>
+                <input type="text" placeholder="location" id="editLocation">
+                <label for="willDeliver">Will Deliver?</label>
+                <select name="Select Yes or No" id="editSelect">
+                <option value="false" selected>No</option>
+                <option value="true">Yes</option>
+                </select>
+                <p class="updateNote"></p>
+                <button type="submit">Edit Post</button>
+                <div class="xclose"><a>X CLOSE</a></div>
+            </form>
+        </footer>
+</body>
+</html>
